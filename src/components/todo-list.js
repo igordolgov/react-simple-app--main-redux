@@ -1,8 +1,9 @@
 import React from 'react'
 
 const TodoList = (props) => {
-  const { todos, toggleTodo } = props // В качестве props будет массив todos (в синтаксисе ES2015)
-  // Эта строка равнозначна строке с записью: const todos = this.props.todos
+  const { todos, toggleTodo } = props // В качестве props будет массив todos и функция
+  // toggleTodo (в синтаксисе ES2015) Эта строка равнозначна строке с записью:
+  // "const todos = this.props.todos" и т.п.
   return (
     <div>
       <h2>Список задач</h2>
