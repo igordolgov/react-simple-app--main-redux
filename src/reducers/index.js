@@ -14,7 +14,7 @@ const todos = (state = [], action) => {
         // т.е. создаем НОВУЮ копию массива) и для каждого элемента массива проверяем:
         if (todo.id === action.id) { // если id равен id, который передан в action,
           // то есть, если это та задача, статус которой должен поменяться,
-          return { id: action.id, name: todo.name, checked: !todo.checked }
+          return { id: todo.id, name: todo.name, checked: !todo.checked }
           // возвращаем копию данной задачи, но с обратным статусом в checked ('!')
         }
         return todo // иначе возвращаем todo (оставляем как было)

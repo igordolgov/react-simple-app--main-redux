@@ -6,15 +6,15 @@ import React from 'react'
 import { connect } from 'react-redux' // Для того, чтобы дочерние компоненты
 // могли воздействовать на store (и при этом изменялся бы интерфейс)
 
-import TodoList from '../components/todo-list' // импортруем нужные файлы
-import AddTodo from '../../.vscode/add-todo'
-import { addTodo, toggleTodo } from '../actions'
+import TodoList from '../components/todo-list'; // импортруем нужные файлы
+import AddTodo from '../components/add-todo';
+import { addTodo, toggleTodo } from '../actions';
 
 let App = (props) => { // объявляем компонент как чистую функцию, которая
 // будет получать на вход параметры (props) и выводить наружу результат
   const {
-    todos, toggleTodo, addTodo
-  } = props
+    todos, addTodo, toggleTodo
+  } = props;
   return (
     <div>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
@@ -39,6 +39,6 @@ const mapDispatchToProps = (dispatch) => {
 App = connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App);
 
-export default App // Экспортируем компонент наружу
+export default App; // Экспортируем компонент наружу
